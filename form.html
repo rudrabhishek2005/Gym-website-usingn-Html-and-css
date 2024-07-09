@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYM Joining Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('./banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.6); 
+  }
+  .form-header {
+    background-color: orange;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .form-body {
+    text-align: left;
+  }
+  .form-body label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .form-body input, .form-body select, .form-body textarea {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.3); 
+    color: #000; 
+  }
+  .form-body button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .form-body button:hover {
+    background-color: #ff7f00;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="form-header">GYM Joining Form</div>
+  <div class="form-body">
+    <form action="gym.html" method="post" enctype="multipart/form-data">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" required><br><br>
+      
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" required><br><br>
+      
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br><br>
+      
+      <label for="trainer">Type of Trainer:</label>
+      <select id="trainer" name="trainer">
+        <option value="">Choose...</option>
+        <option value="Without trainer">Without Trainer</option>
+        <option value="With trainer">With Trainer</option>
+        <option value="Personal Trainer">Personal Trainer</option>
+      </select><br><br>
+      
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+      
+      <label for="joining_date">Date of Joining:</label>
+      <input type="date" id="joining_date" name="joining_date"><br><br>
+      
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+      
+      <button type="reset">Reset Form</button>
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
